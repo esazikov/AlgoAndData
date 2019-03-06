@@ -1,3 +1,4 @@
+import linkedlist.Entry;
 import linkedlist.LinkedList;
 import linkedlist.SimpleLinkedListImpl;
 
@@ -17,6 +18,10 @@ public class Main04 {
         linkedList.remove(3);
 
         linkedList.display();
+
+        for (Integer e : linkedList) {
+            System.out.println(e);
+        }
 
     }
 }

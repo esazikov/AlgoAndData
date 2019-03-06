@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.Iterator;
+
 public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
     protected Entry<E> firstElement;
@@ -66,7 +68,7 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         }
 
         if (previous == null) {
-            if (current.getNext() == null){
+            if (current.getNext() == null) {
                 firstElement = null;
             } else {
                 firstElement = current.getNext();
@@ -90,4 +92,24 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
         }
         System.out.println("----------");
     }
+
+    @Override
+    public void setFirst(Entry<E> entry) {
+        this.firstElement = entry;
+    }
+
+    @Override
+    public E getFirstElement() {
+
+        return firstElement.getValue();
+    }
+
+    @Override
+    public Iterator iterator() {
+        return new LinkIterator(this);
+    }
 }
+
+
+
+

@@ -8,14 +8,17 @@ public class Entry<E> {
     private Entry<E> next;
 
     public Entry(E value) {
+
         this.value = value;
     }
 
     public Entry<E> getNext() {
+
         return next;
     }
 
     public void setNext(Entry<E> next) {
+
         this.next = next;
     }
 

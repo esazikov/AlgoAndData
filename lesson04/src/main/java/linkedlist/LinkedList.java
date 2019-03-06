@@ -1,6 +1,6 @@
 package linkedlist;
 
-public interface LinkedList<E> {
+public interface LinkedList<E> extends Iterable<E>{
 
     void insert (E value);
     E remove();
@@ -12,4 +12,10 @@ public interface LinkedList<E> {
     boolean find (E value);
 
     void display();
+
+    void setFirst(Entry<E> entry);
+
+    // Entry<E> getFirst();
+
+    E getFirstElement();
 }
